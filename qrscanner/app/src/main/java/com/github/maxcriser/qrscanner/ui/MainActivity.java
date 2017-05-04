@@ -1,7 +1,6 @@
 package com.github.maxcriser.qrscanner.ui;
 
 import android.Manifest;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,13 +12,10 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
 import com.github.maxcriser.qrscanner.R;
-import com.github.maxcriser.qrscanner.adapter.ItemAdapter;
 import com.github.maxcriser.qrscanner.adapter.SampleFragmentPagerAdapter;
 import com.google.zxing.Result;
 
