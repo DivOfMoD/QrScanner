@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Walker</string>
     <string name="need_access_to_the_camera">Application need access to the camera</string>
+    <string name="alternative_server">Альтернативный сервер</string>
+    <string name="server_path">http://mob.dvigenie.pro/walker.php</string>
+    <string name="alternative_passw">Альтернативный пароль</string>
+    <string name="login">Логин</string>
+    <string name="passw">Пароль</string>
+    <string name="sound_enabled">Звук при сканировании</string>
 </resources>

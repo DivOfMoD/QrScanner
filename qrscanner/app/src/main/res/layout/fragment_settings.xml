@@ -1,62 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
 
-    <ScrollView
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <FrameLayout
+        <CheckedTextView
+            android:id="@+id/checkable_alt_server"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:onClick="onAltServerClicked"
+            android:text="@string/alternative_server"
+            android:textSize="15sp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:textSize="66sp"
-                android:text="PROVERKA"
-                android:layout_height="112dp"/>
+        <EditText
+            android:id="@+id/edit_text_server"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/server_path"
+            android:textSize="15sp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:textSize="66sp"
-                android:text="PROVERKA"
-                android:layout_height="112dp"/>
+        <CheckedTextView
+            android:id="@+id/checkable_alt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:onClick="onAltPasswordClicked"
+            android:text="@string/alternative_passw"
+            android:textSize="15sp"/>
 
+        <EditText
+            android:id="@+id/edit_text_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/login"
+            android:textSize="15sp"
+            android:inputType=""/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:textSize="66sp"
-                android:text="PROVERKA"
-                android:layout_height="112dp"/>
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/passw"
+            android:textSize="15sp"/>
 
+        <CheckedTextView
+            android:id="@+id/checkable_scan_sound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:checked="true"
+            android:gravity="center_vertical"
+            android:onClick="onScanSoundClicked"
+            android:text="@string/sound_enabled"
+            android:textSize="15sp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:textSize="66sp"
-                android:text="PROVERKA"
-                android:layout_height="112dp"/>
+    </LinearLayout>
 
-
-            <TextView
-                android:layout_width="match_parent"
-                android:textSize="66sp"
-                android:text="PROVERKA"
-                android:layout_height="112dp"/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:textSize="66sp"
-                android:text="PROVERKA"
-                android:layout_height="112dp"/>
-
-
-
-
-        </FrameLayout>
-
-    </ScrollView>
-
-</LinearLayout>
+</ScrollView>
