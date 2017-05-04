@@ -2,8 +2,77 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorTopLine</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MainCardItem" parent="MainCard">
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_height">@dimen/db_item_height</item>
+    </style>
+
+    <style name="MainCard" parent="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="cardBackgroundColor">@color/colorMainItem</item>
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">2dp</item>
+    </style>
+
+    <style name="MainCardLinear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="CardLinearImage">
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
+    <style name="CardLinearText">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center|start</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="CardLinearDescriptionText" parent="CardLinearText">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="DatabaseTitleTextStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center|start</item>
+        <item name="android:layout_weight">10</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="CloseButtonDatabaseItemStyle">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:layout_width">@dimen/db_item_height</item>
+        <item name="android:layout_height">@dimen/db_item_height</item>
+    </style>
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
     </style>
 
 </resources>

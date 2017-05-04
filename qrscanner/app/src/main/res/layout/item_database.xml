@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        style="@style/MainCardItem">
+
+        <LinearLayout
+            android:paddingLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.maxcriser.qrscanner.view.labels.TextViewThin
+                android:id="@+id/item_title"
+                android:maxLines="1"
+                android:text="www.horizon.tv"
+                style="@style/DatabaseTitleTextStyle"/>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/item_close"
+                android:src="@drawable/ic_close_white_24dp"
+                style="@style/CloseButtonDatabaseItemStyle"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

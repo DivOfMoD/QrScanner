@@ -3,16 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@android:color/black"
     android:layout_height="match_parent"
-    tools:context="com.github.maxcriser.qrscanner.MainActivity">
+    tools:context="com.github.maxcriser.qrscanner.ui.MainActivity">
 
-    <Button
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:id="@+id/zxingscanner_id"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:layout_margin="48dp"
-        android:background="#ff0000"
-        android:onClick="onScanClicked"
-        android:text="Start scan"/>
+        android:layout_height="match_parent"/>
 
 </FrameLayout>
