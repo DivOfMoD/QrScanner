@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Login");
         final View modifyView = getLayoutInflater().inflate(R.layout.fragment_settings, null);
-        alert.setView(modifyView);
+        alert.setView(SettingsView.getInstance(this, getLayoutInflater()));
         alert.setCancelable(false);
         alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
