@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.github.maxcriser.qrscanner.MainActivity">
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
 
-    <Button
+    <include layout="@layout/fragment_toolbar"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:layout_margin="48dp"
-        android:background="#ff0000"
-        android:onClick="onScanClicked"
-        android:text="Go to scan page"/>
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground" />
 
-</FrameLayout>
+</LinearLayout>
