@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
 
     private static final int PERMISSION_REQUEST_CAMERA = 0;
     SharedPreferences mSharedPreferences;
-    private DatabaseHelper dbHelper;
 
     @Override
     public final void handleResult(final Result pResult) {

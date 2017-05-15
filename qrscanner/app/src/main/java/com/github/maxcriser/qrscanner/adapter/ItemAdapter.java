@@ -31,7 +31,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemHolder> {
     @Override
     public void onBindViewHolder(final ItemHolder holder, final int position) {
         if (mCursor.moveToPosition(position)) {
-            holder.mTitle.setText(mCursor.getString(mCursor.getColumnIndex(ItemModel.TEXT)));
+            holder.mTitle.setText(mCursor.getString(mCursor.getColumnIndex(ItemModel.DATA)));
         }
     }
 

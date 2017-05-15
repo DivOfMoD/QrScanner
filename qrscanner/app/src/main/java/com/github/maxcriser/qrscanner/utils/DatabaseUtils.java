@@ -35,7 +35,7 @@ public final class DatabaseUtils {
                         // TODO: 15.05.2017 try send to server
                         final String id = pCursor.getString(pCursor.getColumnIndex(ItemModel.ID));
                         final String codeFormat = pCursor.getString(pCursor.getColumnIndex(ItemModel.CODE_FORMAT));
-                        final String text = pCursor.getString(pCursor.getColumnIndex(ItemModel.TEXT));
+                        final String text = pCursor.getString(pCursor.getColumnIndex(ItemModel.DATA));
                         // TODO: 15.05.2017 add all fields
 
 //                         onSuccess()

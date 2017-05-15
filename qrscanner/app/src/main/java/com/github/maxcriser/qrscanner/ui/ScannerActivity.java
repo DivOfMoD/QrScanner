@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.github.maxcriser.qrscanner.Core;
@@ -18,14 +19,21 @@ import com.github.maxcriser.qrscanner.utils.DialogUtils;
 import com.github.maxcriser.qrscanner.utils.NetworkUtils;
 import com.google.zxing.Result;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class ScannerActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
+    private static final String DATE_FORMAT = "yyyy/MM/dd HH:mm:ss";
     private ZXingScannerView mZXingScannerView;
     private DatabaseHelper dbHelper;
     private Boolean isSound;
-    SharedPreferences mSharedPreferences;
+    private SharedPreferences mSharedPreferences;
+    private String login;
+    private String password;
 
     @Override
     public void handleResult(final Result pResult) {
@@ -51,17 +59,23 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
 
                     @Override
                     public void onClick(final DialogInterface dialog, final int which) {
+                        final SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT, Locale.getDefault());
+                        final String currentDate = sdf.format(new Date());
+                        final String gps = null; // // TODO: 5/15/17
+                        final String format = pResult.getBarcodeFormat().toString();
+
                         if (NetworkUtils.isOnline(ScannerActivity.this)) {
                             final android.support.v7.app.AlertDialog progressDialog = DialogUtils.showProgressDialog(ScannerActivity.this, getLayoutInflater());
                             // TODO: 15.05.2017 if sending success or denied progressDialog.dismiss();
+                            // TODO: 5/15/17 login pass result gps date format
 
                             // TODO: 13.05.2017 Try load to server, if sending are not applied then save to database // addItem(...);
 //                            Toast.makeText(ScannerActivity.this, R.string.no_internet_connection, Toast.LENGTH_LONG).show();
-                            addItem(result, pResult.getBarcodeFormat().toString());
+                            addItem(result, format, login, password, currentDate, gps);
                             mZXingScannerView.resumeCameraPreview(ScannerActivity.this);
                         } else {
                             Toast.makeText(ScannerActivity.this, R.string.no_internet_connection, Toast.LENGTH_LONG).show();
-                            addItem(result, pResult.getBarcodeFormat().toString());
+                            addItem(result, format, login, password, currentDate, gps);
                             mZXingScannerView.resumeCameraPreview(ScannerActivity.this);
                         }
                     }
@@ -71,11 +85,15 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         alert.show();
     }
 
-    private void addItem(final String result, final String resultCode) {
+    private void addItem(final String result, final String resultCode, final String login, final String password, final String date, final String gps) {
         final ContentValues newItem = new ContentValues();
         newItem.put(ItemModel.ID, (Integer) null);
-        newItem.put(ItemModel.TEXT, result);
+        newItem.put(ItemModel.DATA, result);
         newItem.put(ItemModel.CODE_FORMAT, resultCode);
+        newItem.put(ItemModel.LOGIN, login);
+        newItem.put(ItemModel.PASSWORD, password);
+        newItem.put(ItemModel.DATE_INFO, date);
+        newItem.put(ItemModel.GPS, gps);
 
         dbHelper.insert(ItemModel.class, newItem, null);
     }
@@ -107,5 +125,7 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
 
         mSharedPreferences = getSharedPreferences(Constants.Shared.SHARED_NAME, MODE_PRIVATE);
         isSound = mSharedPreferences.getBoolean(Constants.Shared.SOUND, true);
+        login = mSharedPreferences.getString(Constants.Shared.USERNAME, Constants.AlternativeData.USERNAME);
+        password = mSharedPreferences.getString(Constants.Shared.PASSWORD, Constants.AlternativeData.PASSWORD);
     }
 }
