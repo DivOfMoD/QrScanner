@@ -47,4 +47,8 @@ public interface DatabaseHelper {
         }
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> FEATURE-merge-maxcriser-account

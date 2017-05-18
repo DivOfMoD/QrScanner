@@ -1,4 +1,32 @@
+<<<<<<< HEAD
 <resources>
     <string name="app_name">Walker</string>
     <string name="need_access_to_the_camera">Application need access to the camera</string>
+=======
+<resources>
+    <string name="app_name">Walker</string>
+    <string name="need_access_to_the_camera">Доступ к камере необходим для функционала приложения</string>
+    <string name="detected">Сканирование</string>
+    <string name="cancel">Отмена</string>
+    <string name="ok">Принять</string>
+    <string name="settings">Настройки</string>
+    <string name="save">Сохранить</string>
+    <string name="server">Сервер</string>
+    <string name="password">Пароль</string>
+    <string name="username">Имя пользователя</string>
+    <string name="use_alternative_username_and_password">Альтернативный логин и пароль</string>
+    <string name="use_alternative_server">Альтернативный сервер</string>
+    <string name="sound_at_recognition">Звук при сканировании</string>
+    <string name="please_fill_all_fields">Необходимо заполнить все поля</string>
+    <string name="server_example_com">server.example.com</string>
+    <string name="username_eng">username</string>
+    <string name="password_eng">password</string>
+    <string name="sending">Отправка на сервер</string>
+    <string name="results_of_sending">Результат отправки</string>
+    <string name="sended">Отправлено:</string>
+    <string name="not_sended">Не отправлено:</string>
+    <string name="all">Всего:</string>
+    <string name="no_internet_connection">Интернет подключение отсутствует. Ваша запись будет добавлена в список и отправлена при первой возможности.</string>
+    <string name="no_connection_try_again">Интернет подключение отсутствует. Проверьте подключение к интернету и попробуйте снова.</string>
+>>>>>>> FEATURE-merge-maxcriser-account
 </resources>

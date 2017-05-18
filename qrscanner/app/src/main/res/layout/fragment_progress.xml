@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@android:color/black"
+        android:text="@string/sending"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <com.rey.material.widget.ProgressView
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:pv_autostart="true"
+        app:lpd_maxLineWidth="56dp"
+        app:lpd_minLineWidth="12dp"
+        app:lpd_strokeColor ="@color/colorAccent"
+        app:lpd_strokeSecondaryColor  ="@color/colorAccent"
+        app:lpd_strokeColors="@color/colorAccent"
+        app:pv_circular="false"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress"
+        app:pv_progressMode="indeterminate"/>
+
+</LinearLayout>
