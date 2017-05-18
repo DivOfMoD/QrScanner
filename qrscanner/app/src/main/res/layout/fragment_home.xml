@@ -19,11 +19,11 @@
 
                 <com.github.maxcriser.qrscanner.view.labels.TextViewExtraLight
                     style="@style/CardLinearText"
-                    android:text="Scanning"/>
+                    android:text="@string/scanning"/>
 
                 <com.github.maxcriser.qrscanner.view.labels.TextViewThin
                     style="@style/CardLinearDescriptionText"
-                    android:text="Translation of the image into text format"/>
+                    android:text="@string/translation_of_the_image_into_text_format"/>
 
             </LinearLayout>
 
@@ -51,11 +51,11 @@
 
                 <com.github.maxcriser.qrscanner.view.labels.TextViewExtraLight
                     style="@style/CardLinearText"
-                    android:text="Settings"/>
+                    android:text="@string/settings"/>
 
                 <com.github.maxcriser.qrscanner.view.labels.TextViewThin
                     style="@style/CardLinearDescriptionText"
-                    android:text="Change send settings"/>
+                    android:text="@string/change_send_settings"/>
 
             </LinearLayout>
 
@@ -83,11 +83,11 @@
 
                 <com.github.maxcriser.qrscanner.view.labels.TextViewExtraLight
                     style="@style/CardLinearText"
-                    android:text="Sending"/>
+                    android:text="@string/sending_short"/>
 
                 <com.github.maxcriser.qrscanner.view.labels.TextViewThin
                     style="@style/CardLinearDescriptionText"
-                    android:text="Copy the database to the server"/>
+                    android:text="@string/copy_the_database_to_the_server"/>
 
             </LinearLayout>
 

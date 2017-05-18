@@ -23,4 +23,9 @@
     <string name="all">Всего:</string>
     <string name="no_internet_connection">Интернет подключение отсутствует. Ваша запись будет добавлена в список и отправлена при первой возможности.</string>
     <string name="no_connection_try_again">Интернет подключение отсутствует. Проверьте подключение к интернету и попробуйте снова.</string>
+    <string name="scanning">Сканирование</string>
+    <string name="translation_of_the_image_into_text_format">Преобразование кода в текстовый формат</string>
+    <string name="change_send_settings">Настройка приложения и сервера</string>
+    <string name="sending_short">Отправка</string>
+    <string name="copy_the_database_to_the_server">Копирование данных на сервер</string>
 </resources>
