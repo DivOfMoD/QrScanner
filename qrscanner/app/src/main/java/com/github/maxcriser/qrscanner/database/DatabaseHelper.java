@@ -46,9 +46,4 @@ public interface DatabaseHelper {
             return new DatabaseHelperImpl(pContext);
         }
     }
-
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> FEATURE-merge-maxcriser-account

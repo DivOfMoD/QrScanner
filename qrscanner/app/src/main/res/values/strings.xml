@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<resources>
-    <string name="app_name">Walker</string>
-    <string name="need_access_to_the_camera">Application need access to the camera</string>
-=======
 <resources>
     <string name="app_name">Walker</string>
     <string name="need_access_to_the_camera">Доступ к камере необходим для функционала приложения</string>
@@ -28,5 +23,4 @@
     <string name="all">Всего:</string>
     <string name="no_internet_connection">Интернет подключение отсутствует. Ваша запись будет добавлена в список и отправлена при первой возможности.</string>
     <string name="no_connection_try_again">Интернет подключение отсутствует. Проверьте подключение к интернету и попробуйте снова.</string>
->>>>>>> FEATURE-merge-maxcriser-account
 </resources>

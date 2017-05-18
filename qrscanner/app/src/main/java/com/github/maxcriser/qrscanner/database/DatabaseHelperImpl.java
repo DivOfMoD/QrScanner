@@ -23,17 +23,10 @@ import java.lang.reflect.AnnotatedElement;
 import java.lang.reflect.Field;
 import java.util.Locale;
 
-<<<<<<< HEAD
-import static com.github.maxcriser.qrscanner.constants.DatabaseConst.Database.SQL_TABLE_CREATE_FIELD_TEMPLATE;
-import static com.github.maxcriser.qrscanner.constants.DatabaseConst.Database.SQL_TABLE_CREATE_TEMPLATE;
-import static com.github.maxcriser.qrscanner.constants.DatabaseConst.Database.dbVersion;
-import static com.github.maxcriser.qrscanner.constants.DatabaseConst.Database.mDatabaseName;
-=======
 import static com.github.maxcriser.qrscanner.constants.Constants.Database.SQL_TABLE_CREATE_FIELD_TEMPLATE;
 import static com.github.maxcriser.qrscanner.constants.Constants.Database.SQL_TABLE_CREATE_TEMPLATE;
 import static com.github.maxcriser.qrscanner.constants.Constants.Database.dbVersion;
 import static com.github.maxcriser.qrscanner.constants.Constants.Database.mDatabaseName;
->>>>>>> FEATURE-merge-maxcriser-account
 
 public final class DatabaseHelperImpl extends SQLiteOpenHelper implements DatabaseHelper {
 

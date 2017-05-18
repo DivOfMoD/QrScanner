@@ -9,10 +9,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface typeString {
 
-<<<<<<< HEAD
     String value() default "TEXT";
-=======
-    String value() default "DATA";
->>>>>>> FEATURE-merge-maxcriser-account
 
 }
