@@ -28,7 +28,7 @@ import static com.github.maxcriser.qrscanner.constants.Constants.Database.SQL_TA
 import static com.github.maxcriser.qrscanner.constants.Constants.Database.dbVersion;
 import static com.github.maxcriser.qrscanner.constants.Constants.Database.mDatabaseName;
 
-public final class DatabaseHelperImpl extends SQLiteOpenHelper implements DatabaseHelper {
+final class DatabaseHelperImpl extends SQLiteOpenHelper implements DatabaseHelper {
 
     DatabaseHelperImpl(final Context pContext) {
         super(pContext, mDatabaseName, null, dbVersion);

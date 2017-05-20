@@ -29,4 +29,5 @@ public final class ItemModel {
 
     @typeString
     public static final String CODE_FORMAT = "code_format";
+
 }

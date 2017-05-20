@@ -9,9 +9,12 @@
     <include layout="@layout/fragment_toolbar"/>
 
     <android.support.v4.view.ViewPager
+        android:visibility="gone"
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackground" />
+
+    <include layout="@layout/fragment_home"/>
 
 </LinearLayout>

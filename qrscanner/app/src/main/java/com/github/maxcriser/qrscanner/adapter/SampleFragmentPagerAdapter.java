@@ -10,13 +10,13 @@ import android.support.v4.app.LoaderManager;
 import com.github.maxcriser.qrscanner.fragment.PageFragment;
 
 public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
-    final int PAGE_COUNT = 2;
-    private Context context;
-    private String tabTitles[] = new String[] { "Scanning", "DATABASE" };
-    private LoaderManager mLoaderManager;
-    private Application mApplication;
+    private final int PAGE_COUNT = 2;
+    private final Context context;
+    private final String[] tabTitles = new String[] { "Scanning", "DATABASE" };
+    private final LoaderManager mLoaderManager;
+    private final Application mApplication;
 
-    public SampleFragmentPagerAdapter(FragmentManager fm, Context context, Application pApplication, LoaderManager pLoaderManager) {
+    public SampleFragmentPagerAdapter(final FragmentManager fm, final Context context, final Application pApplication, final LoaderManager pLoaderManager) {
         super(fm);
         mApplication = pApplication;
         mLoaderManager = pLoaderManager;
@@ -29,12 +29,12 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    public Fragment getItem(int position) {
+    public Fragment getItem(final int position) {
         return PageFragment.newInstance(position + 1, mLoaderManager, mApplication, context);
     }
 
     @Override
-    public CharSequence getPageTitle(int position) {
+    public CharSequence getPageTitle(final int position) {
         return tabTitles[position];
     }
 }

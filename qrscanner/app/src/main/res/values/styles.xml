@@ -26,6 +26,8 @@
     </style>
 
     <style name="MainCardLinear">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">?selectableItemBackground</item>
@@ -34,11 +36,13 @@
     </style>
 
     <style name="CardLinearImage">
+        <item name="android:gravity">center</item>
         <item name="android:padding">5dp</item>
         <item name="android:layout_width">36dp</item>
         <item name="android:layout_height">36dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
     </style>
 
     <style name="CardLinearText">
@@ -48,7 +52,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center|start</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">17sp</item>
     </style>
 

@@ -66,6 +66,7 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
 
                         if (NetworkUtils.isOnline(ScannerActivity.this)) {
                             final android.support.v7.app.AlertDialog progressDialog = DialogUtils.showProgressDialog(ScannerActivity.this, getLayoutInflater());
+                            progressDialog.dismiss();
                             // TODO: 15.05.2017 if sending success or denied progressDialog.dismiss();
                             // TODO: 5/15/17 login pass result gps date format
 
@@ -88,12 +89,12 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
     private void addItem(final String result, final String resultCode, final String login, final String password, final String date, final String gps) {
         final ContentValues newItem = new ContentValues();
         newItem.put(ItemModel.ID, (Integer) null);
-        newItem.put(ItemModel.DATA, result);
-        newItem.put(ItemModel.CODE_FORMAT, resultCode);
         newItem.put(ItemModel.LOGIN, login);
         newItem.put(ItemModel.PASSWORD, password);
+        newItem.put(ItemModel.DATA, result);
         newItem.put(ItemModel.DATE_INFO, date);
         newItem.put(ItemModel.GPS, gps);
+        newItem.put(ItemModel.CODE_FORMAT, resultCode);
 
         dbHelper.insert(ItemModel.class, newItem, null);
     }

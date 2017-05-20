@@ -26,17 +26,20 @@ public final class DatabaseUtils {
 
             @Override
             public void onSuccess(final Cursor pCursor) {
-                Integer countSended = 0;
-                Integer countNotSended = 0;
+                final Integer countSended = 0;
+                final Integer countNotSended = 0;
                 final Integer countOfItems = pCursor.getCount();
 
                 for (int i = 0; i < countOfItems; i++) {
                     if (pCursor.moveToNext()) {
                         // TODO: 15.05.2017 try send to server
                         final String id = pCursor.getString(pCursor.getColumnIndex(ItemModel.ID));
+                        final String login = pCursor.getString(pCursor.getColumnIndex(ItemModel.LOGIN));
+                        final String password = pCursor.getString(pCursor.getColumnIndex(ItemModel.PASSWORD));
+                        final String data = pCursor.getString(pCursor.getColumnIndex(ItemModel.DATA));
+                        final String dateInfo = pCursor.getString(pCursor.getColumnIndex(ItemModel.DATE_INFO));
+                        final String gps = pCursor.getString(pCursor.getColumnIndex(ItemModel.GPS));
                         final String codeFormat = pCursor.getString(pCursor.getColumnIndex(ItemModel.CODE_FORMAT));
-                        final String text = pCursor.getString(pCursor.getColumnIndex(ItemModel.DATA));
-                        // TODO: 15.05.2017 add all fields
 
 //                         onSuccess()
 //                        dbHelper.delete(ItemModel.class, null, ItemModel.ID + " = ?", String.valueOf(id));

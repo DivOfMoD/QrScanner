@@ -10,7 +10,7 @@ import com.github.maxcriser.qrscanner.R;
 public class ItemHolder extends RecyclerView.ViewHolder {
 
     public TextView mTitle;
-    public AppCompatImageButton mClose;
+    private AppCompatImageButton mClose;
 
     public ItemHolder(final View itemView) {
         super(itemView);
