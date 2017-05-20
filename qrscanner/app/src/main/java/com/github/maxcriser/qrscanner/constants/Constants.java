@@ -27,4 +27,12 @@ public class Constants {
         String USE_ALT_PASS_AND_USERNMAE = "shared_alt_p_a_u_walker";
         String SOUND = "shared_sound_walker";
     }
+
+    public interface GPS {
+
+        String HTTP_IP_API_COM_JSON = "http://ip-api.com/json";
+        String API_LATITUDE = "lat";
+        String API_LONGITUDE = "lon";
+        String GPS_FORMAT = "lat:%1slon:%2s";
+    }
 }

@@ -1,102 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
 
-    <android.support.v7.widget.CardView
-        style="@style/MainCard">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
-            style="@style/MainCardLinear"
-            android:onClick="onScanClicked">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_weight="100"
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="match_parent">
+            <android.support.v7.widget.CardView
+                style="@style/MainCard">
 
-                <com.github.maxcriser.qrscanner.view.labels.TextViewExtraLight
-                    style="@style/CardLinearText"
-                    android:text="@string/scanning"/>
+                <LinearLayout
+                    style="@style/MainCardLinear"
+                    android:onClick="onScanClicked">
 
-                <com.github.maxcriser.qrscanner.view.labels.TextViewThin
-                    style="@style/CardLinearDescriptionText"
-                    android:text="@string/translation_of_the_image_into_text_format"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
 
-            </LinearLayout>
+                        <TextView
+                            style="@style/CardLinearText"
+                            android:text="@string/scanning"/>
 
-            <android.support.v7.widget.AppCompatImageView
-                style="@style/CardLinearImage"
-                android:src="@drawable/qrcode_scan"/>
+                        <TextView
+                            style="@style/CardLinearDescriptionText"
+                            android:text="@string/translation_of_the_image_into_text_format"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/CardLinearImage"
+                        android:src="@drawable/qrcode_scan"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/MainCard"
+                android:onClick="onSettingsClicked">
+
+                <LinearLayout
+                    style="@style/MainCardLinear"
+                    android:onClick="onSettingsClicked">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/CardLinearText"
+                            android:text="@string/settings"/>
+
+                        <TextView
+                            style="@style/CardLinearDescriptionText"
+                            android:text="@string/change_send_settings"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/CardLinearImage"
+                        android:src="@drawable/settings"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/MainCard"
+                android:layout_marginBottom="16dp"
+                android:onClick="onSendingClicked">
+
+                <LinearLayout
+                    style="@style/MainCardLinear"
+                    android:onClick="onSendingClicked">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/CardLinearText"
+                            android:text="@string/sending_short"/>
+
+                        <TextView
+                            style="@style/CardLinearDescriptionText"
+                            android:text="@string/copy_the_database_to_the_server"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/CardLinearImage"
+                        android:src="@drawable/send"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
 
         </LinearLayout>
 
-    </android.support.v7.widget.CardView>
+    </ScrollView>
 
-    <android.support.v7.widget.CardView
-        android:onClick="onSettingsClicked"
-        style="@style/MainCard">
-
-        <LinearLayout
-            android:onClick="onSettingsClicked"
-            style="@style/MainCardLinear">
-
-            <LinearLayout
-                android:layout_weight="100"
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="match_parent">
-
-                <com.github.maxcriser.qrscanner.view.labels.TextViewExtraLight
-                    style="@style/CardLinearText"
-                    android:text="@string/settings"/>
-
-                <com.github.maxcriser.qrscanner.view.labels.TextViewThin
-                    style="@style/CardLinearDescriptionText"
-                    android:text="@string/change_send_settings"/>
-
-            </LinearLayout>
-
-            <android.support.v7.widget.AppCompatImageView
-                style="@style/CardLinearImage"
-                android:src="@drawable/settings"/>
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:onClick="onSendingClicked"
-        style="@style/MainCard">
-
-        <LinearLayout
-            android:onClick="onSendingClicked"
-            style="@style/MainCardLinear">
-
-            <LinearLayout
-                android:layout_weight="100"
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="match_parent">
-
-                <com.github.maxcriser.qrscanner.view.labels.TextViewExtraLight
-                    style="@style/CardLinearText"
-                    android:text="@string/sending_short"/>
-
-                <com.github.maxcriser.qrscanner.view.labels.TextViewThin
-                    style="@style/CardLinearDescriptionText"
-                    android:text="@string/copy_the_database_to_the_server"/>
-
-            </LinearLayout>
-
-            <android.support.v7.widget.AppCompatImageView
-                style="@style/CardLinearImage"
-                android:src="@drawable/send"/>
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-</LinearLayout>
+</FrameLayout>

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Walker</string>
     <string name="need_access_to_the_camera">Доступ к камере необходим для функционала приложения</string>
-    <string name="detected">Сканирование</string>
+    <string name="detected">Результат сканирования</string>
     <string name="cancel">Отмена</string>
     <string name="ok">Принять</string>
     <string name="settings">Настройки</string>
@@ -28,4 +28,5 @@
     <string name="change_send_settings">Настройка приложения и сервера</string>
     <string name="sending_short">Отправка</string>
     <string name="copy_the_database_to_the_server">Копирование данных на сервер</string>
+    <string name="gps_not_found">GPS not found</string>
 </resources>
